@@ -1,0 +1,30 @@
+*{
+    padding:0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#b8e7f5, #11abd9);
+}
+
+.girl{
+    position: relative;
+    height:256px;
+    width:calc(1536px/6);
+    background:url(spritestrip.png);
+    transform:perspective(500px) rotate(-25deg) translateY(-150px);
+    animation: animateGirl 1s steps(6) infinite;
+}
+@keyframes animateGirl
+{
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -1536px;
+    }
+}
